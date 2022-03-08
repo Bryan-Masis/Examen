@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <form th:object="${Evento}"
+                  th:action="@{/save}"
+                  method="POST">
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="Artista">Artista</label>
+                    <input type="text" th:field="*{Artista}" class="form-control form-control-sm">
+                </div>
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="Precio">Precio</label>
+                    <input type="long" th:field="*{Precio}" class="form-control form-control-sm">
+                </div>
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="Capacidadmx">Capacidad Maxima</label>
+                    <input type="String" th:field="*{Capacidadmx}" class="form-control form-control-sm">
+                </div>
+                <div class="form-group-row">
+                    <label class="form-control-sm col-md-2" for="Lugar">Lugar del envento</label>
+                    <input type="String" th:field="*{Lugar}" class="form-control form-control-sm">
+                </div>
+                <input type="submit" th:value="#{/saveEvento}" name="Guardar"/>
+                <input type="submit" th:value="#{/delete}" name="Eliminar"/>
+                
+        </div>
+    </body>
+</html>
+
